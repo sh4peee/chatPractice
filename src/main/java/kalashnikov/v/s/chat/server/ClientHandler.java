@@ -25,7 +25,6 @@ public class ClientHandler implements Runnable {
 
             String message;
             while (!Thread.currentThread().isInterrupted() && (message = in.readLine()) != null) {
-                System.out.println(nickName + ": " + message);
                 chatLog.put(nickName + ": " + message, this);
             }
             chatLog.put(nickName + " disconnected from chat", this);
